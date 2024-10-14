@@ -1,5 +1,9 @@
+import dynamic from "next/dynamic"
 import { Fragment } from "react"
-import MapComponent from "./map"
+
+const MapComponent = dynamic(() => import("./map"), {
+  ssr: false
+})
 
 const App = () => {
   return (

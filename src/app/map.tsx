@@ -1,10 +1,14 @@
 "use client"
-
 import { MapContainer, TileLayer } from 'react-leaflet'
 
 import 'leaflet/dist/leaflet.css';
+import getChargers from './api/chargers';
 
 const MapComponent = () => {
+  const chargers = getChargers("Opole");
+
+  console.log(chargers)
+
   return (
     <MapContainer
       center={[51.505, -0.09]}
