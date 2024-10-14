@@ -1,13 +1,26 @@
 "use client"
 import { MapContainer, TileLayer } from 'react-leaflet'
-
+import { useEffect } from "react";
 import 'leaflet/dist/leaflet.css';
-import getChargers from './api/chargers';
 
 const MapComponent = () => {
-  const chargers = getChargers("Opole");
+  const fetchChargers = async (city: any) => {
+    try {
+      const response = await fetch(`/api/chargers/${city}`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch chargers");
+      }
+      const data = await response.json();
 
-  console.log(chargers)
+      console.log(data)
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    fetchChargers("Opole");
+  }, []);
 
   return (
     <MapContainer
