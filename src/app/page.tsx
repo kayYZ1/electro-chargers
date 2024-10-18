@@ -1,17 +1,18 @@
 import dynamic from "next/dynamic"
-import { Fragment } from "react"
-import { VoivodeshipsList } from "../components/voivodeshipList"
-const MapComponent = dynamic(() => import("../components/map"), {
+
+import VoivodeshipsList from "@/components/voivodeships-list"
+
+const BlurredMap = dynamic(() => import("@/components/blurred-map"), {
   ssr: false
 })
 
-const App = () => {
+export default function App() {
   return (
-    <Fragment>
-      <VoivodeshipsList />
-      <MapComponent />
-    </Fragment>
+    <div className="relative min-h-screen">
+      <BlurredMap />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <VoivodeshipsList />
+      </div>
+    </div>
   )
 }
-
-export default App
