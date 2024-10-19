@@ -9,12 +9,6 @@ export default function BluredMap() {
       center={[50.672, 17.925]}
       zoom={8}
       className="blur-sm h-screen"
-      dragging={false}
-      scrollWheelZoom={false}
-      touchZoom={false}
-      doubleClickZoom={false}
-      zoomControl={false}
-      keyboard={false}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

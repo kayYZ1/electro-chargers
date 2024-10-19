@@ -1,6 +1,7 @@
 "use client"
 import React, { ReactNode } from 'react'
 import { ThemeProvider } from '../components/theme-provider'
+import ReactQueryProvider from './react-query';
 
 interface Props {
 	children: ReactNode;
@@ -14,7 +15,9 @@ const Providers = (props: Props) => {
 			enableSystem
 			disableTransitionOnChange
 		>
-			{props.children}
+			<ReactQueryProvider>
+				{props.children}
+			</ReactQueryProvider>
 		</ThemeProvider >
 	)
 }
