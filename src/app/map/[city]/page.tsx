@@ -8,6 +8,8 @@ import axios from "axios";
 import 'leaflet/dist/leaflet.css';
 
 import BottomBar from '../components/bottom-bar';
+import CustomMarker from '../components/custom-marker';
+import { Charger } from '../types';
 
 export default function Page({ params }: { params: { city: string } }) {
   const { data, isSuccess, isError, error } = useQuery({
@@ -23,6 +25,7 @@ export default function Page({ params }: { params: { city: string } }) {
       <MapContainer
         center={[50.672, 17.925]}
         zoom={16}
+        minZoom={12}
         className="h-screen z-0"
         scrollWheelZoom={true}
       >
@@ -30,6 +33,9 @@ export default function Page({ params }: { params: { city: string } }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        {data && data.map((charger: Charger) => (
+          <CustomMarker {...charger} key={charger.id} />
+        ))}
       </MapContainer>
       {isSuccess && <BottomBar numberOfChargers={data.length} />}
     </Fragment>
