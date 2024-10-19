@@ -6,6 +6,7 @@ export const Voivodeships = [
       'Polska południowo-zachodnia. Znane z różnorodnych krajobrazów, historycznych miast jak Wrocław oraz Sudetów.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2020/04/19/08/06/old-town-5062333_960_720.jpg',
+    city: 'Wrocław',
   },
   {
     id: 14,
@@ -14,6 +15,7 @@ export const Voivodeships = [
       'Zachodnia Polska. Region bogaty w lasy, jeziora i winnice, znany z malowniczych krajobrazów oraz miast jak Zielona Góra.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2020/11/04/19/22/old-windmill-5713337_960_720.jpg',
+    city: 'Zielona Góra',
   },
   {
     id: 9,
@@ -22,6 +24,7 @@ export const Voivodeships = [
       'Wschodnia Polska. Znane z urokliwych miasteczek, malowniczych krajobrazów oraz zabytków takich jak Zamek w Lublinie.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2015/11/08/19/01/lublin-1034106_960_720.jpg',
+    city: 'Lublin',
   },
   {
     id: 2,
@@ -30,6 +33,7 @@ export const Voivodeships = [
       'Południowa prowincja, znana z Krakowa, dawnej stolicy Polski. Słynie z architektury średniowiecznej i dziedzictwa kulturowego.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2019/09/12/18/34/street-4472321_960_720.jpg',
+    city: 'Kraków',
   },
   {
     id: 1,
@@ -38,6 +42,7 @@ export const Voivodeships = [
       'Najludniejsze województwo, w którym znajduje się Warszawa. Znane z połączenia nowoczesnych terenów miejskich i tradycyjnej polskiej wsi.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2017/09/11/17/26/warsaw-2739767_960_720.jpg',
+    city: 'Warszawa',
   },
   {
     id: 13,
@@ -46,6 +51,7 @@ export const Voivodeships = [
       'Najmniejsze województwo, położone na południu Polski. Znane z bogatego dziedzictwa kulturowego i mniejszości niemieckiej.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2018/02/06/19/02/river-3135457_960_720.jpg',
+    city: 'Opole',
   },
   {
     id: 15,
@@ -54,6 +60,7 @@ export const Voivodeships = [
       'Polska północno-centralna. Znane z historycznych miast jak Bydgoszcz i Toruń oraz malowniczych krajobrazów nad Wisłą.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2019/12/22/19/44/bell-4713231_960_720.jpg',
+    city: 'Bydgoszcz',
   },
   {
     id: 3,
@@ -62,6 +69,7 @@ export const Voivodeships = [
       'Północna Polska, położona nad Morzem Bałtyckim. Znane z pięknych plaż, średniowiecznych zamków i historycznego Gdańska.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2022/05/28/11/27/gdansk-7227096_960_720.jpg',
+    city: 'Gdańsk',
   },
   {
     id: 10,
@@ -70,14 +78,16 @@ export const Voivodeships = [
       'Południowo-wschodnia Polska. Znane z dzikiej przyrody Bieszczad, a także z rzemiosła ludowego i zamków.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2021/08/14/04/15/mountains-6544522_960_720.jpg',
+    city: 'Rzeszów',
   },
   {
     id: 11,
     name: 'Podlaskie',
     description:
-      'Północno-wschodnia Polska. Słynie z wielokulturowości, bogactwa natury i puszczy białowieskiej – ostoi żubrów.',
+      'Północno-wschodnia Polska. Słynie z wielokulturowości, bogactwa natury i puszczy białowieskiej ostoi żubrów.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2022/01/07/11/34/krasnoyarsk-6921747_960_720.jpg',
+    city: 'Białystok',
   },
   {
     id: 4,
@@ -86,6 +96,7 @@ export const Voivodeships = [
       'Wysoce uprzemysłowiony region w południowej Polsce. Znany z dziedzictwa górniczego, nowoczesnych miast jak Katowice oraz Beskidów.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2017/02/09/00/52/katowice-2050866_960_720.jpg',
+    city: 'Katowice',
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ export const Voivodeships = [
       'Południowo-centralna Polska. Znane z Gór Świętokrzyskich, historycznych klasztorów oraz prehistorycznych jaskiń.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2018/10/27/15/30/kielce-3776754_960_720.jpg',
+    city: 'Kielce',
   },
   {
     id: 8,
@@ -102,6 +114,7 @@ export const Voivodeships = [
       'Polska północno-zachodnia. Znane z długiej linii brzegowej Bałtyku, jezior oraz portowego miasta Szczecin.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2022/05/25/09/42/szczecin-7220179_960_720.jpg',
+    city: 'Szczecin',
   },
   {
     id: 5,
@@ -110,6 +123,7 @@ export const Voivodeships = [
       'Polska centralno-zachodnia, uważana za kolebkę polskiej państwowości. Bogata historia, jeziora i tętniący życiem Poznań.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2018/08/10/16/35/poznan-3597198_960_720.jpg',
+    city: 'Poznań',
   },
   {
     id: 16,
@@ -118,6 +132,7 @@ export const Voivodeships = [
       'Północno-wschodnia Polska. Słynie z malowniczych Mazur, jezior oraz zabytków z czasów Zakonu Krzyżackiego.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2021/12/01/21/26/rail-6839167_960_720.jpg',
+    city: 'Olsztyn',
   },
   {
     id: 7,
@@ -126,5 +141,6 @@ export const Voivodeships = [
       'Polska centralna. Słynie z dziedzictwa przemysłu włókienniczego, szkoły filmowej oraz rewitalizowanych fabryk w Łodzi.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2021/04/28/07/44/street-6213240_960_720.jpg',
+    city: 'Łódź',
   },
 ]

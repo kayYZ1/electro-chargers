@@ -24,7 +24,7 @@ export default function VoivodeshipsList() {
                   ? "hover:bg-blue-50 hover:border hover:border-blue-500 cursor-pointer"
                   : "opacity-50 cursor-not-allowed"
                   }`}
-                onClick={() => router.push(`map/${voivodeship.name}`)}
+                onClick={() => router.push(`map/${voivodeship.city}`)}
               >
                 <img
                   src={voivodeship.imageUrl}

@@ -3,19 +3,22 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
 import { Fragment } from "react";
 import { useQuery } from '@tanstack/react-query';
+import { ToastAction } from '@radix-ui/react-toast';
 import axios from "axios";
 
 import 'leaflet/dist/leaflet.css';
 
+import { useToast } from '@/hooks/use-toast';
 import BottomBar from '../components/bottom-bar';
 import CustomMarker from '../components/custom-marker';
 import { Charger } from '../types';
 
 export default function Page({ params }: { params: { city: string } }) {
+  const { toast } = useToast();
   const { data, isSuccess, isError, error } = useQuery({
     queryKey: ['chargers', params.city],
     queryFn: async () => {
-      const response = await axios.get(`/api/chargers/Opole`) //Change to {params.city}
+      const response = await axios.get(`/api/chargers/${params.city}`)
       return response.data
     }
   }) // Add toast/snackbar to display errors
