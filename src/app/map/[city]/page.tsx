@@ -12,6 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import BottomBar from '../components/bottom-bar';
 import CustomMarker from '../components/custom-marker';
 import { Charger } from '../types';
+import { CITIES_COORDINATES } from '../cities-coordinates';
 
 export default function Page({ params }: { params: { city: string } }) {
   const { toast } = useToast();
@@ -26,7 +27,7 @@ export default function Page({ params }: { params: { city: string } }) {
   return (
     <Fragment>
       <MapContainer
-        center={[50.672, 17.925]}
+        center={CITIES_COORDINATES[params.city]}
         zoom={16}
         minZoom={12}
         className="h-screen z-0"
@@ -40,7 +41,7 @@ export default function Page({ params }: { params: { city: string } }) {
           <CustomMarker {...charger} key={charger.id} />
         ))}
       </MapContainer>
-      {isSuccess && <BottomBar numberOfChargers={data.length} />}
+      {isSuccess && <BottomBar numberOfChargers={data.length} city={params.city} />}
     </Fragment>
   )
 }

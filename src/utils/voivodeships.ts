@@ -6,7 +6,7 @@ export const Voivodeships = [
       'Polska południowo-zachodnia. Znane z różnorodnych krajobrazów, historycznych miast jak Wrocław oraz Sudetów.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2020/04/19/08/06/old-town-5062333_960_720.jpg',
-    city: 'Wrocław',
+    city: 'Wroclaw',
   },
   {
     id: 14,
@@ -15,7 +15,7 @@ export const Voivodeships = [
       'Zachodnia Polska. Region bogaty w lasy, jeziora i winnice, znany z malowniczych krajobrazów oraz miast jak Zielona Góra.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2020/11/04/19/22/old-windmill-5713337_960_720.jpg',
-    city: 'Zielona Góra',
+    city: 'Zielona_Gora',
   },
   {
     id: 9,
@@ -33,7 +33,7 @@ export const Voivodeships = [
       'Południowa prowincja, znana z Krakowa, dawnej stolicy Polski. Słynie z architektury średniowiecznej i dziedzictwa kulturowego.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2019/09/12/18/34/street-4472321_960_720.jpg',
-    city: 'Kraków',
+    city: 'Krakow',
   },
   {
     id: 1,
@@ -69,7 +69,7 @@ export const Voivodeships = [
       'Północna Polska, położona nad Morzem Bałtyckim. Znane z pięknych plaż, średniowiecznych zamków i historycznego Gdańska.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2022/05/28/11/27/gdansk-7227096_960_720.jpg',
-    city: 'Gdańsk',
+    city: 'Gdansk',
   },
   {
     id: 10,
@@ -78,7 +78,7 @@ export const Voivodeships = [
       'Południowo-wschodnia Polska. Znane z dzikiej przyrody Bieszczad, a także z rzemiosła ludowego i zamków.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2021/08/14/04/15/mountains-6544522_960_720.jpg',
-    city: 'Rzeszów',
+    city: 'Rzeszow',
   },
   {
     id: 11,
@@ -87,7 +87,7 @@ export const Voivodeships = [
       'Północno-wschodnia Polska. Słynie z wielokulturowości, bogactwa natury i puszczy białowieskiej ostoi żubrów.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2022/01/07/11/34/krasnoyarsk-6921747_960_720.jpg',
-    city: 'Białystok',
+    city: 'Bialystok',
   },
   {
     id: 4,
@@ -123,7 +123,7 @@ export const Voivodeships = [
       'Polska centralno-zachodnia, uważana za kolebkę polskiej państwowości. Bogata historia, jeziora i tętniący życiem Poznań.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2018/08/10/16/35/poznan-3597198_960_720.jpg',
-    city: 'Poznań',
+    city: 'Poznan',
   },
   {
     id: 16,
@@ -141,6 +141,6 @@ export const Voivodeships = [
       'Polska centralna. Słynie z dziedzictwa przemysłu włókienniczego, szkoły filmowej oraz rewitalizowanych fabryk w Łodzi.',
     imageUrl:
       'https://cdn.pixabay.com/photo/2021/04/28/07/44/street-6213240_960_720.jpg',
-    city: 'Łódź',
+    city: 'Lodz',
   },
 ]
