@@ -1,21 +1,22 @@
 "use client"
 
-import { MapContainer, TileLayer } from 'react-leaflet'
-import { Fragment } from "react";
+import { MapContainer, TileLayer, Marker } from 'react-leaflet'
+import { Fragment, useState } from "react";
 import { useQuery } from '@tanstack/react-query';
-import { ToastAction } from '@radix-ui/react-toast';
-import axios from "axios";
+import axios from "axios"
 
 import 'leaflet/dist/leaflet.css';
 
-import { useToast } from '@/hooks/use-toast';
 import BottomBar from '../components/bottom-bar';
-import CustomMarker from '../components/custom-marker';
+import MarkerIcon from '../components/marker-icon';
+import MarkerPopup from '../components/marker-popup';
 import { Charger } from '../types';
 import { CITIES_COORDINATES } from '../cities-coordinates';
 
 export default function Page({ params }: { params: { city: string } }) {
-  const { toast } = useToast();
+  const [popup, setPopup] = useState(false);
+  const [activeCharger, setActiveCharger] = useState<Charger>();
+
   const { data, isSuccess, isError, error } = useQuery({
     queryKey: ['chargers', params.city],
     queryFn: async () => {
@@ -38,9 +39,20 @@ export default function Page({ params }: { params: { city: string } }) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {data && data.map((charger: Charger) => (
-          <CustomMarker {...charger} key={charger.id} />
+          <Marker
+            key={charger.id}
+            icon={MarkerIcon}
+            position={[charger.latitude, charger.longitude]}
+            eventHandlers={{
+              click: () => {
+                setActiveCharger(charger)
+                setPopup(true)
+              }
+            }}
+          />
         ))}
       </MapContainer>
+      {popup && <MarkerPopup setPopup={setPopup} charger={activeCharger!} />}
       {isSuccess && <BottomBar numberOfChargers={data.length} city={params.city} />}
     </Fragment>
   )
