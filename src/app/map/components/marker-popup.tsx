@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Charger } from "../types"
+import Image from 'next/image'
 
 interface MarkerPopup {
   setPopup: (val: boolean) => void
@@ -18,7 +19,7 @@ export default function MarkerPopup({ setPopup, charger }: MarkerPopup) {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-lg shadow-xl w-full max-w-lg mx-auto overflow-hidden">
         <div className="relative">
-          <img
+          <Image
             src="https://picsum.photos/600/300"
             alt="Charger location"
             className="w-full h-auto aspect-video object-cover"

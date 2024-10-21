@@ -16,9 +16,7 @@ class Singleton {
     this.client = new MongoClient(uri, options)
     this.clientPromise = this.client.connect()
 
-    if (process.env.NODE_ENV === 'development') {
-      global._mongoClientPromise = this.clientPromise
-    }
+    global._mongoClientPromise = this.clientPromise
   }
 
   public static get instance() {

@@ -1,5 +1,7 @@
 "use client"
+
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -23,7 +25,7 @@ export default function VoivodeshipsList() {
                 hover:bg-blue-50 hover:border hover:border-blue-500 cursor-pointer"
               onClick={() => router.push(`map/${voivodeship.city}`)}
             >
-              <img
+              <Image
                 src={voivodeship.imageUrl}
                 alt={voivodeship.name}
                 className="w-16 h-16 object-cover rounded-md flex-shrink-0"

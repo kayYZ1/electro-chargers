@@ -17,6 +17,6 @@ export async function GET(req: Request, { params }: { params: { city: string } }
 
     return NextResponse.json(formattedChargers);
   } catch (error) {
-    return NextResponse.json({ error: "Failed to fetch chargers" }, { status: 500 });
+    return NextResponse.json({ error: `Failed to fetch chargers, ${error}` }, { status: 500 });
   }
 }

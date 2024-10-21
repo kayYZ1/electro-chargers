@@ -18,7 +18,7 @@ export default function Page({ params }: { params: { city: string } }) {
   const [popup, setPopup] = useState(false);
   const [activeCharger, setActiveCharger] = useState<Charger>();
 
-  const { data, isSuccess, isError, error } = useQuery({
+  const { data, isSuccess } = useQuery({
     queryKey: ['chargers', params.city],
     queryFn: async () => {
       const response = await axios.get(`/api/chargers/${params.city}`)
