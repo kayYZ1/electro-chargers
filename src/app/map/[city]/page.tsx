@@ -1,9 +1,10 @@
 "use client"
 
-import { MapContainer, TileLayer, Marker } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import MarkerClusterGroup from "react-leaflet-cluster";
 import { Fragment, useState } from "react";
 import { useQuery } from '@tanstack/react-query';
-import axios from "axios"
+import axios from "axios";
 
 import 'leaflet/dist/leaflet.css';
 
@@ -38,19 +39,24 @@ export default function Page({ params }: { params: { city: string } }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {data && data.map((charger: Charger) => (
-          <Marker
-            key={charger.id}
-            icon={MarkerIcon}
-            position={[charger.latitude, charger.longitude]}
-            eventHandlers={{
-              click: () => {
-                setActiveCharger(charger)
-                setPopup(true)
-              }
-            }}
-          />
-        ))}
+        <MarkerClusterGroup
+          chunkedLoading
+          showCoverageOnHover={false}
+        >
+          {data && data.map((charger: Charger) => (
+            <Marker
+              key={charger.id}
+              icon={MarkerIcon}
+              position={[charger.latitude, charger.longitude]}
+              eventHandlers={{
+                click: () => {
+                  setActiveCharger(charger)
+                  setPopup(true)
+                }
+              }}
+            />
+          ))}
+        </MarkerClusterGroup>
       </MapContainer>
       {popup && <MarkerPopup setPopup={setPopup} charger={activeCharger!} />}
       {isSuccess && <BottomBar numberOfChargers={data.length} city={params.city} />}

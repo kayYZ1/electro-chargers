@@ -1,4 +1,4 @@
-import { X, MapPin, Home, Cable, Mail } from 'lucide-react'
+import { X, MapPin, Home, Cable } from 'lucide-react'
 
 import {
   Accordion,
