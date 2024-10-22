@@ -31,7 +31,7 @@ export default function Page({ params }: { params: { city: string } }) {
       <MapContainer
         center={CITIES_COORDINATES[params.city]}
         zoom={16}
-        minZoom={12}
+        minZoom={11}
         className="h-screen z-0"
         scrollWheelZoom={true}
       >
